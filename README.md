@@ -1,3 +1,3 @@
-# <Jasmine>'s Personal Website
+# Jasmine's Personal Website
 This is a personal website built using the Hack4Impact Starter Pack!
-<You can add any description you want here.>
+Get to know me more by visiting it here! https://jasmiineng.github.io 
