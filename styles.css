@@ -324,7 +324,6 @@
 
 
 
-
   /* BLOG-POST */
   .blog-post {
     flex: 1 1 300px; 
@@ -358,4 +357,24 @@
     display: block;
   }
 
+
+
+
+  /* BLOG-POST 1*/
+  .blogpost1 h1 {
+    color: #0077B6;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+  }
+
+  .bloginfo1 p {
+    color: #0077B6;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
 
