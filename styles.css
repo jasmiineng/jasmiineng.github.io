@@ -373,8 +373,36 @@
     color: #0077B6;
     font-family: Verdana, sans-serif;
     text-align: center;
-    font-weight: bold;
     font-size: 12px;
   }
+
+  .blogimage1 img {
+    padding-bottom: 10px;
+  }
+
+
+
+
   
+  /* BLOG-POST 2 */
+  .blogpost2 {
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .blogpost2 h1 {
+    color: #0077B6;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+  }
+
+  .bloginfo2 p {
+    color: #0077B6;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-size: 12px;
+  }
+
 
