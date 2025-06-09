@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/navbar';
 import { motion } from 'framer-motion';
 import jasmineImg from './assets/jasmine.png';
@@ -56,7 +56,6 @@ const Home: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
       <div className="bg-white text-gray-800 font-sans min-h-screen">
         <Navbar />
         <Routes>
@@ -67,7 +66,6 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-    </Router>
   );
 };
 
