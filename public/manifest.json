@@ -1,10 +1,11 @@
 {
-    "short_name": "MySite",
-    "name": "My Website",
+    "short_name": "Portfolio",
+    "name": "Jasmine Ng",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
-    "description": "My React site on GitHub Pages",
+    "theme_color": "#ffffff",
+    "description": "Portfolio website for Jasmine Ng",
     "icons": []
   }
   
