@@ -30,10 +30,10 @@ const Projects: React.FC = () => {
         <motion.div
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0 }} 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="flex-1 group bg-white border border-yellow-200 rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden"
+          className="flex-1 group bg-white border border-yellow-200 rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden hover:ring-4 hover:ring-yellow-300 hover:ring-opacity-50"
         >
           <Link to="/projects/ClapCounter">
             <img
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-yellow-600 mb-2">
+              <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-yellow-600 mb-2 transition-colors duration-0">
                 Clap Counter
               </h2>
               <p className="text-gray-600 text-sm">
@@ -56,9 +56,9 @@ const Projects: React.FC = () => {
         <motion.div
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.97 }}
+          transition={{ duration: 0 }} 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
           className="flex-1 bg-gray-50 border border-gray-200 rounded-2xl shadow-inner p-6 flex items-center justify-center text-center"
         >
           <div>
