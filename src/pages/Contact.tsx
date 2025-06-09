@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
+import avatarImage from '../assets/jasmineprofessional.png';
 
 const SERVICE_ID = 'service_8qy3nhw';
 const TEMPLATE_ID = 'template_vlapbp1';
@@ -10,6 +11,8 @@ const PUBLIC_KEY = 'YdFIiKm4rPx6kYNPX';
 
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { once: true, margin: '-100px' });
   const [status, setStatus] = useState('');
   const [showThankYou, setShowThankYou] = useState(false);
   const { width, height } = useWindowSize();
@@ -36,13 +39,26 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="min-h-screen w-full bg-white px-6 md:px-12 py-16 flex items-center justify-center"
+      className="relative min-h-screen w-full bg-white px-6 md:px-12 py-16 flex items-center justify-center"
     >
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div className="text-center md:text-left space-y-6">
-          <h1 className="text-4xl md:text-5xl font-black text-gray-800">
-            Get in Touch
-          </h1>
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-24 items-center z-10">
+        <div className="flex flex-col items-center text-center space-y-6 relative">
+          {/* Square Image */}
+          <motion.div
+            ref={imageRef}
+            initial={{ opacity: 0, scale: 0.9, y: -10 }}
+            animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="w-52 md:w-64 aspect-square rounded-xl overflow-hidden border-4 border-yellow-500 shadow-md"
+          >
+            <img
+              src={avatarImage}
+              alt="Jasmine avatar"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          <h1 className="text-4xl md:text-5xl font-black text-gray-800">Get in Touch</h1>
           <p className="text-lg text-gray-600 leading-relaxed">
             Have a question, idea, or opportunity to share? I'd love to hear from you.
             Feel free to drop a note!
@@ -52,10 +68,11 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
+        {/* Contact Form */}
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="bg-gradient-to-tr from-yellow-100 via-white to-yellow-50 border border-yellow-200 rounded-3xl shadow-xl p-10 space-y-6 backdrop-blur-sm"
+          className="bg-yellow-100 border border-yellow-200 rounded-2xl shadow-lg p-10 space-y-6"
         >
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-1">Name</label>
@@ -121,6 +138,7 @@ const Contact: React.FC = () => {
         </form>
       </div>
 
+      {/* Thank You Popup */}
       <AnimatePresence>
         {showThankYou && (
           <motion.div
