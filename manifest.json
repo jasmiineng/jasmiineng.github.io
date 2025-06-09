@@ -1,0 +1,10 @@
+{
+    "short_name": "MySite",
+    "name": "My Website",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "My React site on GitHub Pages",
+    "icons": []
+  }
+  
