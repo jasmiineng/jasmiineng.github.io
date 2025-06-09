@@ -6,7 +6,7 @@ import jasmineImg from './assets/jasmine.png';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import ClapCounter from './pages/projects/clapCounter';
+import ClapCounter from './pages/projects/ClapCounter';
 
 const Home: React.FC = () => {
   return (
@@ -62,7 +62,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/clapCounter" element={<ClapCounter />} />
+          <Route path="/projects/ClapCounter" element={<ClapCounter />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
