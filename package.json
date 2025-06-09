@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "0.1.0",
-  "homepage": "https://jasmiineng.github.io/jasmineng.github.io",
+  "homepage": "https://jasmiineng.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
