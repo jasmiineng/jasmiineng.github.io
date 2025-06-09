@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
-                  to="/projects/clapCounter"
+                  to="/projects/ClapCounter"
                   className="block px-6 py-3 text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-all duration-200 font-medium"
                 >
                   Clap Counter
