@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
         transition={{ delay: 0.4 }}
         className="group bg-white border border-yellow-200 rounded-2xl shadow-lg hover:shadow-xl transition-all block max-w-xl mx-auto overflow-hidden"
       >
-        <Link to="/projects/clapCounter">
+        <Link to="/projects/ClapCounter">
           <img
             src={clapImage}
             alt="Clap Counter"
