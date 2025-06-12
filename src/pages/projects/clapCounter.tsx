@@ -39,7 +39,7 @@ const ClapCounter: React.FC = () => {
           <motion.img
             src={clapImg}
             alt="Clap Counter"
-            className="w-full max-w-md rounded-3xl border-4 border-yellow-300 shadow-xl"
+            className="w-full max-w-sm rounded-3xl border-4 border-yellow-300 shadow-xl"
             whileHover={{ scale: 1.03 }}
           />
         </div>
